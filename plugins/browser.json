@@ -1,0 +1,34 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.contadorES"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.contadorES"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.contadorES"
+    },
+    "com.virtuoworks.cordova-plugin-canvascamera": {
+      "PACKAGE_NAME": "com.contadorES"
+    },
+    "cordova-plugin-mobile-ocr": {
+      "PACKAGE_NAME": "com.contadorES"
+    },
+    "cordovarduino": {
+      "PACKAGE_NAME": "com.contadorES"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.contadorES"
+    }
+  }
+}

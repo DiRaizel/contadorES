@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Color theme for statusbar -->
+        <meta name="theme-color" content="#2196f3">
+        <!-- Your app title -->
+        <title>Contador</title>
+        <!-- Path to Framework7 Library Bundle CSS -->
+        <link rel="stylesheet" href="css/framework7.bundle.min.css">
+        <!-- Path to your custom app styles-->
+        <link rel="stylesheet" href="css/my-app.css">
+    </head>
+
+    <body>
+        <!-- App root element -->
+        <div id="contadorES">
+
+            <div class="panel panel-left panel-cover panel-resizable">
+                <div class="block">
+                    <div class="list">
+                        <ul>
+                            <li id="btnHomeMenu">
+                                <a href="/home/" class="item-link item-content panel-close">
+                                    <div class="item-media"><i class="fas fa-sign-in-alt"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Entrada</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="btnHome2Menu">
+                                <a href="/salida/" class="item-link item-content panel-close">
+                                    <div class="item-media"><i class="fas fa-sign-out-alt"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Salida</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statusbar overlay -->
+            <div class="statusbar"></div>
+
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+
+                <!-- Initial Page, "data-name" contains page name -->
+                <div data-name="home" class="page" style="">
+
+                    <!-- Top Navbar -->
+                    <div class="navbar">
+                        <div class="navbar-inner barraNav">
+                            <div class="left iconoMenu"><a href="#" class="panel-open" style="color: white;"><i style="" class="fas fa-bars"></i></a></div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Toolbar -->
+                    <div class="toolbar toolbar-bottom fblanco">
+                        <div class="toolbar-inner" style="background-color: transparent;">
+                            <!-- Toolbar links -->
+                            <div class="row" style="width: 100%;">
+                                <div class="col-100"><img src="img/footer.jpeg" style="width: 100%; height: 10vh;"/></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="block" style="padding: 0px;">
+                            <div class="row">
+                                <div class="col-100" style="text-align: center;">
+                                    <div class="row" style="margin-bottom: 0px;">
+                                        <div class="col-10"></div>
+                                        <div class="col-80">
+                                            <img class="imgLogin" id="imgLogin" style="width: 100%;" src="img/logoLogin.png">
+                                        </div>
+                                        <div class="col-10"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row block" style="align-items: center; margin: 0px; margin-bottom: 5px;">
+                                <div class="col"></div>
+                                <button class="col button button-raised button-fill button-round" onclick="tomarFoto(1);">Tomar foto</button>
+                                <div class="col"></div>
+                            </div>
+                            <div class="block" style="text-align: center;">
+                                <form class="list formDatos" id="formDatos" name="formDatos" method="POST" action="javascript:guardarDatos(1)">
+                                    <ul style="background: transparent;">
+                                        <li>
+                                            <div class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-title item-label" style="font-size: 18px; margin-bottom: 5px;">Documento</div>
+                                                    <div class="item-input-wrap">
+                                                        <input style="border: 1px #004288 solid; border-radius: 5px;" type="text" id="documento" name="documento" placeholder="Documento" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-title item-label" style="font-size: 18px; margin-bottom: 5px;">Nombres</div>
+                                                    <div class="item-input-wrap">
+                                                        <input style="border: 1px #004288 solid; border-radius: 5px;" type="text" id="nombres" name="nombres" placeholder="Nombres" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-title item-label" style="font-size: 18px; margin-bottom: 5px;">Apellidos</div>
+                                                    <div class="item-input-wrap">
+                                                        <input style="border: 1px #004288 solid; border-radius: 5px;" type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-title item-label" style="font-size: 18px; margin-bottom: 5px;">Temperatura</div>
+                                                    <div class="item-input-wrap">
+                                                        <input style="border: 1px #004288 solid; border-radius: 5px;" type="text" id="temperatura" name="temperatura" placeholder="Temperatura" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-30"></div>
+                                                <button type="submit" class="col-40 button button-fill button-round" style="background-color: #004288; margin-top: 15px;">Guardar</button>
+                                                <div class="col-30"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                            <div class="block" style="text-align: center; font-weight: bold;">
+                                <p id="textoImagen"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- Path to Framework7 Library Bundle JS-->
+        <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
+        <script type="text/javascript" src="js/fonts-awesome.js"></script>
+        <!-- Path to your app js-->
+        <script type="text/javascript" src="js/my-app.js"></script>
+
+    </body>
+
+</html>

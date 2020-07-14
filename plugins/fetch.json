@@ -1,0 +1,58 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@4.1.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-crop": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-crop"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.virtuoworks.cordova-plugin-canvascamera": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/VirtuoWorks/CanvasCameraPlugin.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.2.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-mobile-ocr": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-mobile-ocr"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordovarduino": {
+    "source": {
+      "type": "registry",
+      "id": "cordovarduino"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
